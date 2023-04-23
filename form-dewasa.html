@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <title>Vector Skrining</title>
+
+        <!-- Logo -->
+        <link rel="icon" href="src/images/header/VectorLogo.png" type="image/x-icon">
+
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+
+        <!-- My CSS -->
+        <link rel="stylesheet" href="src/css/style.css" />
+
+        <!-- Bootstrap icons -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css" />
+
+        <!-- AOS -->
+        <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+    <body>
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-light fw-bold mb-3 shadow-lg fixed-top" style="background-color: #ffffff">
+        <div class="container">
+          <div class="d-flex flex-row bd-highlight mb-3">
+            <div class="icon kembali p-2 bd-highlight">
+              <a href="/"><i class="fa-solid fa-arrow-left"></i></a>
+              <span>Kembali</span>
+            </div>
+          </div>
+          </div>
+        </div>
+      </nav>
+      <!-- Akhir Navbar -->
+
+      <!-- Form -->
+      <section id="form">
+            <div class="container" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+                <div class="row justify-content-center">
+                    <div class="col-md-8 mb-3">
+                        <div class="card">
+                        <div class="card-body">
+                          <form action="" method="POST" class="form" id="multiphase" onsubmit="return false">
+                            <h1 class="text-center">Skrining Form</h1>
+                            <!-- Progress bar -->
+                            <div class="progressbar">
+                              <div class="progress" id="progress"></div>
+                              <div class="progress-step progress-step-active" data-title="Identitas"></div>
+                              <div class="progress-step" data-title="Skrining"></div>
+                              <div class="progress-step" data-title="Hasil"></div>
+                            </div>
+                      
+                            <!-- Steps -->
+                            <div class="mb-3 form-step form-step-active">
+                              <div class="mb-3">
+                                <label for="nama" class="form-label">Nama Lengkap</label>
+                                <input type="text" class="form-control" name="nama" id="nama" placeholder="Nama Lengkap" />
+                              </div>
+                      
+                              <div class="mb-3">
+                                <label for="jkelamin" class="form-label">Jenis Kelamin</label>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="cekjkelamin" id="perempuan">
+                                  <label class="form-check-label" for="perempuan">
+                                    Perempuan
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="cekjkelamin" id="lakilaki">
+                                  <label class="form-check-label" for="lakilaki">
+                                    Laki-Laki
+                                  </label>
+                                </div>
+                              </div>
+                      
+                              <div class="mb-3">
+                                <label for="tanggal" class="form-label">Tanggal Lahir</label>
+                                <input type="date" class="form-control" name="tanggal" id="tanggal" />
+                              </div>
+
+                              <div class="mb-3">
+                                <label for="namaibu" class="form-label">Nama Ibu</label>
+                                <input type="text" class="form-control" name="namaibu" id="namaibu" placeholder="Nama Ibu" />
+                              </div>
+
+                              <hr>
+                              <div class="text-md-end">
+                                <a href="#" class="btn btn-next btn-danger shadow lift me-1 mb-3">Berikutnya</a>
+                              </div>
+                            </div>
+
+                            <div class="mb-3 form-step">
+                              <div class="d-flex flex-row bd-highlight fw-bold mb-3">
+                                <div class="p-2 bd-highlight">1.</div>
+                                <div class="p-2 bd-highlight">Apakah Anda mengalami penurunan berat badan yang tidak direncanakan / tidak diinginkan dalam 6 bulan terakhir?</div>
+                              </div>
+                              <div class="d-flex flex-row bd-highlight mb-3">
+                                <div class="p-3 bd-highlight"></div>
+                                <div class="p-2 bd-highlight">
+                                  0 = Tidak <br> 
+                                  2 = Tidak yakin (ada tanda : baju menjadi lebih longgar) <br> <br>
+                                  Ya, ada penurunan BB sebanyak : <br>
+                                  1 = 1 - 5 kg <br>
+                                  2 = 6 - 10 kg <br>
+                                  3 = 11 - 15 kg <br>
+                                  4 = &gt; 15 kg <br>
+                                  2 = Tidak tahu berapa kg penurunannya
+                                </div>
+                              </div>
+                              <div class="d-flex flex-row bd-highlight mb-3">
+                                <div class="p-3 bd-highlight"></div>
+                                <div class="p-2 bd-highlight">
+                                  <input type="number" class="form-control" id="num1" num="num1" placeholder="isikan skor. contoh : 0">
+                                </div>
+                              </div>
+                              <hr>
+                              <div class="d-flex flex-row bd-highlight fw-bold mb-3">
+                                <div class="p-2 bd-highlight">2.</div>
+                                <div class="p-2 bd-highlight">Apakah asupan makanan berkurang karena tidak nafsu makan?
+                                </div>
+                              </div>
+                              <div class="d-flex flex-row bd-highlight mb-3">
+                                <div class="p-3 bd-highlight"></div>
+                                <div class="p-2 bd-highlight">
+                                    0 = Tidak <br> 
+                                    1 = Ya <br> 
+                                </div>
+                              </div>
+                              <div class="d-flex flex-row bd-highlight mb-3">
+                                <div class="p-3 bd-highlight"></div>
+                                <div class="p-2 bd-highlight">
+                                  <input type="number" class="form-control" id="num2" num="num2" placeholder="isikan skor. contoh : 0">
+                                </div>
+                              </div>
+                              <hr>
+                              <div class="btns-group text-center text-md-end">
+                                <a href="#" class="btn btn-prev btn-danger shadow lift me-1 mb-3">Kembali</a>
+                                <a href="#" class="btn btn-next btn-danger shadow lift me-1 mb-3" id="hitung">Kirim</a>
+                              </div>
+                            </div>
+
+                            <div class="mb-3 form-step">
+                              <div class="hasil">
+                                <p>Skor Anda adalah</p>
+                                <div id="hasil">0</div>
+                                <p class="komentar"></p>
+                              </div>
+                              <div class="btns-group text-md-end">
+                                <a href="/" class="btn btn-next btn-danger shadow lift me-1 mb-3">Selesai</a>
+                              </div>
+                            </div>
+                            
+                          </form>
+                          
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+      <!-- Akhir Form-->
+
+    <!-- kontak -->
+    <section id="kontak">
+        <div class="container">
+          <div class="row justify-content-evenly">
+            <div class="col-md-2 mb-3 text-center">
+              <img style="width: 115px;" src="src/images/header/VectorLogo.png" alt="">
+            </div>
+            <div class="col-md-5 mb-3">
+              <h4 class="fw-bold">Vector</h4>
+              Final Project || Chairos Academy<br>
+              Gg. Ontoseno No. 19C || Ds. Karangjambe<br>
+              Kec. Banguntapan || Kab. Bantul<br>
+              Yogyakarta || 55198<br>
+            </div>
+            <div class="col-md-5 mb-3">
+              <h7 class="fw-bold">Hubungi Kami</h7>
+              <ul>
+                <li>Email : vector_andalusia@gmail.com</li>
+                <li>Phone : (021) 242 96775</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Akhir kontak -->
+  
+      <!-- Process Bar -->
+      <script src="src/js/process.js"></script>
+
+      <!-- Jumlah Skor -->
+      <script src="src/js/skor.js"></script>
+
+      <!-- Font Awesome -->
+      <script src="https://kit.fontawesome.com/b356ad9dc8.js" crossorigin="anonymous"></script>
+
+      <!-- AOS -->
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <script src="src/js/aos.js"></script>
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    </body>
+</html>

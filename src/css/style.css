@@ -1,0 +1,353 @@
+* {
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+#page {
+  padding-top: 5rem;
+  background-color: #ffffff;
+}
+
+.navbar-nav >li>a {
+  color: black !important;
+}
+
+.navbar-nav >li>a:hover {
+  background-color: #df4759;
+  border-radius: 5px;
+  background-image: none;
+  color: white !important;
+}
+
+ul li.active a {
+  background-color: #E64848;
+  color: white !important;
+  border-radius: 5px;
+}
+
+#tentang {
+  color: #ffffff;
+  padding-top: 5rem;
+  background-color: #E64848;
+}
+
+#profilkami {
+  padding-top: 5rem;
+  padding-bottom: 2rem;
+  background-color: #E64848;
+}
+
+#layanan {
+  padding-top: 5rem;
+}
+
+.cards-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.carousel-inner {
+  padding: 1em;
+}
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: #E64848;
+  width: 5vh;
+  height: 5vh;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.card {
+  box-shadow: 0 0 10px rgb(0, 0, 0, 0.5);
+  overflow: hidden;
+  border-bottom: 15px;
+}
+
+.card-body {
+  padding: 2rem;
+}
+
+.img1 img {
+  width: 100%;
+}
+
+.img2 img {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 1;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 7px solid #fff;
+  margin-top: -100px;
+}
+
+.card:hover .img2 img {
+  border-color: #E64848;
+  transition: .7s;
+}
+
+.main-text {
+  padding: 30px 0;
+  text-align: center;
+}
+
+.main-text h2 {
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 20px;
+  margin: 0 0 20px;
+  color: #E64848;
+}
+
+.main-text p {
+  font-size: 16px;
+  padding: 0 35px;
+}
+
+.main{
+  padding-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon{
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  background: #fff;
+  margin: 10px;
+  text-align: center;
+  font-size: 20px;
+  line-height: 32px;
+  font-family: sans-serif;
+  overflow: hidden;
+  box-shadow: 5px 10px 20px rgba(150, 150, 150, .3);
+  transition: all .3s ease-out;
+}
+.icon:hover{
+  width: 200px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  color: #fff;
+}
+.icon:hover i{
+  color: #fff;
+}
+.icon .fa-instagram{
+  color: #E64848;
+}
+.ig:hover{
+  background: #E64848;
+}
+
+.icon .fa-linkedin-in{
+  color: #E64848;
+}
+.lnk:hover{
+  background: #E64848;
+}
+
+.icon .fa-arrow-left{
+  color: #E64848;
+}
+.icon .fa-arrow-right{
+  color: #E64848;
+}
+.kembali:hover {
+  background: #E64848;
+}
+
+.imt{
+  width: 200px;
+  border-radius: 25px;
+  background: #fff;
+  margin: 10px;
+  text-align: center;
+  font-size: 20px;
+  line-height: 32px;
+  font-family: sans-serif;
+  box-shadow: 5px 10px 20px rgba(150, 150, 150, .3);
+  justify-content: space-evenly;
+  display: flex;
+  align-items: center;
+  color: #ff0000;
+}
+
+
+#kontak {
+  padding-top: 2rem;
+  background-color: #f0ebeb;
+}
+
+/* Progress bar dan Form */
+#form {
+  padding-top: 8rem;
+  padding-bottom: 5rem;
+}
+
+:root {
+  --primary-color: #E64848;
+}
+
+.progressbar {
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  counter-reset: step;
+  margin: 2rem 0 4rem;
+}
+
+.progressbar::before,
+.progress {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 4px;
+  width: 100%;
+  background-color: #dcdcdc;
+  z-index: -1;
+}
+
+.progress {
+  background-color: var(--primary-color);
+  width: 0%;
+  transition: 0.3s;
+}
+
+.progress-step {
+  width: 2.1875rem;
+  height: 2.1875rem;
+  background-color: #dcdcdc;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.progress-step::before {
+  counter-increment: step;
+  content: counter(step);
+}
+
+.progress-step::after {
+  content: attr(data-title);
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.progress-step-active {
+  background-color: var(--primary-color);
+  color: #f3f3f3;
+}
+
+.form-step {
+  display: none;
+  transform-origin: top;
+  animation: animate 0.5s;
+}
+
+.form-step-active {
+  display: block;
+}
+
+@keyframes animate {
+  from {
+    transform: scale(1, 0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1, 1);
+    opacity: 1;
+  }
+}
+
+.btn:hover {
+  box-shadow: 0 0 0 2px #fff, 0 0 0 3px var(--primary-color);
+}
+
+/* table */
+table {
+  border-collapse: collapse;
+}
+tbody, thead {
+  border: 1px solid black;
+}
+thead {
+  background-color: #E64848;
+  color: white;
+}
+
+/* BMI Calculator */
+#bmi {
+  padding-top: 7rem;
+  background: #E64848;
+}
+
+.content {
+  padding: 20px 40px;
+}
+
+.input {
+  background: #fff;
+  border-radius: 28px;
+  padding: 20px 0;
+  margin-bottom: 20px;
+  text-align  : center;
+}
+
+.input label {
+  display: block;
+  font-size: 18px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.input input {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #E64848;
+  width: 60%;
+  text-align: center;
+  font-size: 28px;
+}
+
+.hasil {
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.hasil p {
+  font-weight: 600;
+  font-size: 22px;
+  color: #000;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.hasil #hasil {
+  font-size: 36px;
+  font-weight: 900;
+  color: #E64848;
+  background-color: #eaeaea;
+  display: inline-block;
+  padding: 7px 20px;
+  border-radius: 55px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+#komentar {
+  color: #E64848;
+  font-weight: 800;
+}
