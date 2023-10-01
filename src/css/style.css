@@ -351,3 +351,7 @@ thead {
   color: #E64848;
   font-weight: 800;
 }
+
+.custom-number {
+  width: 300px; /* Set the width to auto to fit the content */
+}
